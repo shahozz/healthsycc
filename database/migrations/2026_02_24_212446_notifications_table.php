@@ -6,13 +6,11 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+    
     public function up(): void
 {
     Schema::create('notifications', function (Blueprint $table) {
-        $table->id(); // لارفيل بيحب الـ UUID في التنبيهات
+        $table->id(); 
         $table->foreignId('user_id')->constrained()->onDelete('cascade');
         $table->enum('type', ['critical', 'ai', 'reminder', 'system']);
         $table->string('title');
