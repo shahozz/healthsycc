@@ -11,14 +11,14 @@ class AIAnalysisController extends Controller
     public function analyze()
     {
         $user = auth()->user();
-        // 1. نجيب آخر قراءة للمريض
+      
         $latestVital = $user->vitalSigns()->latest()->first();
 
         if (!$latestVital) {
             return response()->json(['message' => 'لا توجد قراءات كافية للتحليل'], 404);
         }
 
-        // 2. منطق التحليل (Logic) - تخيل إن ده الـ AI
+       
         $riskLevel = 'low';
         $recommendations = ["حافظ على شرب الماء", "التزم بنظام غذائي صحي"];
         $score = 90;
