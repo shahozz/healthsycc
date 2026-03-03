@@ -33,7 +33,7 @@ class AIAnalysisController extends Controller
             $score = 70;
         }
 
-        // 3. حفظ التحليل في الداتابيز عشان يظهر في الـ History
+        
         $analysis = AIAnalysis::create([
     'user_id' => $user->id,
     'risk_level' => $riskLevel,
