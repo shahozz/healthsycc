@@ -38,7 +38,7 @@ class AIAnalysisController extends Controller
     'user_id' => $user->id,
     'risk_level' => $riskLevel,
     'summary' => "بناءً على آخر قراءة ({$latestVital->type}), حالتك {$riskLevel}.",
-    'recommendations' => json_encode($recommendations), // تحويلها لنص JSON
+    'recommendations' => json_encode($recommendations),
     'explanation' => "الـ AI لاحظ إن القراءة غير مستقرة...",
     'health_score' => $score,
 ]);

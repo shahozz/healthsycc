@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class AIAnalysis extends Model
 {
-    use HasFactory; // تأكد أن الحروف كبيرة وصغيرة بهذا الشكل
+    use HasFactory; 
     
-    // أضف هذا السطر وحدد اسم الجدول كما هو في الـ Migration الخاص بك
+    
     protected $table = 'ai_analyses';
 
     protected $fillable = [

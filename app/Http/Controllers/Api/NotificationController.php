@@ -7,13 +7,13 @@ use Illuminate\Http\Request;
 
 class NotificationController extends Controller
 {
-    // عرض تنبيهات المريض
+    
     public function index()
     {
         return response()->json(auth()->user()->notifications()->latest()->get());
     }
 
-    // تعليم التنبيه كـ "مقروء"
+    
     public function markAsRead($id)
     {
         $notification = auth()->user()->notifications()->findOrFail($id);
